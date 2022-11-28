@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/styles.css">
+<style media="screen">
+	body{
+		background-image: url("images/pagelayout.png");
+		background-size: cover;
+		background-attachment: fixed;
+	}
+</style>
+</head>
+<body>
+
+<ul th:fragment="userNavBar">
+  <li><a href="/user">Home</a></li>
+  <li><a href="/user/addbooks">Add Books</a></li>
+  <li><a href="/user/browsebooks">Browse Books</a></li>
+  <li><a href="/user/yourbooks">Books You Own</a></li>
+  <li><a href="/user/borrowedbooks">Borrowed Books</a></li>
+  <li><a href="/user/notifications">Your Notifications</a></li>
+  <li><a href="/user/wallet">Your Wallet</a></li>  
+  <li><a href="/user/adminservice">ADMIN FUNCTIONS</a></li>  
+  
+  <li style="float:right"><a class="active" href="/logout">Logout</a></li>
+</ul>
+
+</body>
+</html>

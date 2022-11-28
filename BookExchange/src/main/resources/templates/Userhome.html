@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+</head>
+<body>
+	<ul th:replace="Pagelayout :: userNavBar"></ul>
+	
+	<div class="container">
+		<h2 th:text="${'Welcome' + ' ' + currentUser.Name + ' ' }"></h2>
+	</div>
+
+	
+
+</body>
+</html>

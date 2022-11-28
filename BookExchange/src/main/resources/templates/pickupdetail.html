@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="row">
+			<form action="@{/user/notifications/completereq/done}" th:object="${borrowedbook}" method="GET">
+				<div class="col-25">
+					<Label for="title">Enter the date,time and place you wish to meet to handover book</Label>
+				</div>
+				<div class="col-75">
+					<input type="text" required="required" th:value="${borrowedbook.pickupDetails}" id="pickupDetails" th:name="pickupDetails">
+					
+				</div> 
+				
+				<div>
+					<input type="submit" value="Submit">				
+				</div>
+			</form>
+		</div>
+</body>
+</html>

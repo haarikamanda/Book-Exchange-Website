@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="row">
+			<form action="/user/wallet" method="GET">
+			  <div class="row">
+				<div class="col-25">
+					<Label for="currentamount">The amount in your wallet is </Label>
+				</div>
+				<div class="col-75">
+					<h2 th:text="${currwall.amount}"></h2>
+				</div> 
+			 </div>
+				<div class="row">
+					<div class="col-25">
+						<label for="amount">Add Amount</label>
+						<p th:text="${message}"></p>
+					</div>
+					<div class="col-75">
+						<input type="text" th:value="${amount}" id="amount"  th:name="amount" >
+					</div>
+				</div>
+				<div>
+					<input type="submit" value="Search">				
+				</div>
+			</form>
+		</div>
+</body>
+</html>

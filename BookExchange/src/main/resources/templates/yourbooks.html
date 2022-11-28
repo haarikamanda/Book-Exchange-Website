@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/styles.css">
+<style media="screen">
+	body{
+		background-image: url("images/yourbooks.png");
+		background-size: cover;
+		background-attachment: fixed;
+	}
+</style>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th> Title </th>
+            <th> Author </th>
+        </tr>
+    </thead>
+    <tbody>
+	<tr th:if="${books.empty}">
+            <td colspan="2"> No Books Available </td>
+        </tr>
+        <tr th:each="book : ${books}">
+            <td><span th:text="${book.title}"> Title </span></td>
+            <td><span th:text="${book.author}"> Author </span></td>
+            <td> <a th:href="@{/user/deletebook/complete(bookId=${book.bookId})}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

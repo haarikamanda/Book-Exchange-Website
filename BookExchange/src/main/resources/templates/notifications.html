@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/styles.css">
+<style media="screen">
+	body{
+		background-image: url("images/notificationpage.png");
+		background-size: cover;
+		background-attachment: fixed;
+	}
+</style>
+</head>
+<body>
+<p><b>Your Book Request Notifications</b></p>
+<table>
+    <thead>
+        <tr>
+            <th> Title </th>
+            <th> Borrower username</th>
+            <th> Date of Return </th>
+        </tr>
+    </thead>
+    <tbody>
+	<tr th:if="${Ownerreq.empty}">
+            <td colspan="2"> No Requests for your books</td>
+        </tr>
+        <tr th:each="req : ${Ownerreq}">
+            <td><span th:text="${req.title}"> Title </span></td>
+            <td><span th:text="${req.Requsername}"> Borrower Username </span></td>
+            <td><span th:text="${req.Retdate}"> Expected Date of Return </span></td>
+            <td> <a th:href="@{/user/notifications/completereq(reqid=${req.BookRequest})}" class="btn btn-danger">Approve Request</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p><b>Your Book Pickup Details</b></p>
+<table>
+<tbody>
+	<tr th:if="${BorrowedBook.empty}">
+            <td colspan="2"> No request for book pickup </td>
+        </tr>
+        <tr th:each="bor : ${BorrowedBook}">
+            <td><span th:text="${bor.title}"> Title </span></td>
+            <td><span th:text="${bor.pickupDetails}"> Details </span></td>
+            <td> <a th:href="@{/user}" class="btn btn-danger">Accept Pickup time</a>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
