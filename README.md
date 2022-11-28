@@ -6,6 +6,7 @@ Functionality:
 User management:
 Users can register as a new user with information such as user name, 
 a user id (unique across the system), phone number, and email id, and address.
+
 • An existing user can log into the system with user id and password.
 • A user can be either Admin user or normal user 
 permissions/responsibilities).
@@ -14,12 +15,14 @@ permissions/responsibilities).
 • Password change facility is present
 
 User Publishing book details:
+
 Users are allowed to publish/share the details of the books they have with them for 
 sharing/lending. Details needed are Book title, Authors, Publisher, Edition, Year etc.
 A user is allowed to delete the published item whenever he/she 
 wants.
 
 User requesting for books: 
+
 Users is allowed to view/search the books published by others and make requests 
 if necessary for a specific book with duration he wants to hold the book on lending.
 • If necessary a user is allowed to delete a request made whenever he/she wants.
@@ -34,6 +37,7 @@ If wallet is not sufficient, then the customer will have to first add money to t
 and then proceed with the booking.
 
  Other functionality:
+ 
 • Admin is able to generate reports like – what are books published by
 a user, transactions conducted by a user.
 • Check the Status of any book.
